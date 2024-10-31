@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 import task2.views
 import task3.views
+from task2.views import GetClass
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get_class/', task2.views.get_class),
+    path('get_class/', GetClass.as_view()),
     path('get_func/', task2.views.get_func),
     path('platform/', task3.views.platform),
     path('platform/games', task3.views.games),
