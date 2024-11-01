@@ -17,14 +17,35 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import task2.views
-import task3.views
 from task2.views import GetClass
 
+# Для домашнего задания "Базовые HTML теги в шаблонах"
+
+# Если проверяется данное домашнее задание, раскомментировать кода ниже,
+# а домашнее задание "DTL. Теги, наследование" оставить закомментированным.
+
+# import task3.views
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('get_class/', GetClass.as_view()),
+#     path('get_func/', task2.views.get_func),
+#     path('platform/', task3.views.platform),
+#     path('games/', task3.views.games),
+#     path('cart/', task3.views.cart),
+# ]
+
+
+
+# Для домашнего задания "DTL. Теги, наследование"
+# Если проверяется данное домашнее задание, раскомментировать кода ниже,
+# а домашнее задание "Базовые HTML теги в шаблонах" оставить закомментированным.
+
+import task4.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('get_class/', GetClass.as_view()),
     path('get_func/', task2.views.get_func),
-    path('platform/', task3.views.platform),
-    path('platform/games', task3.views.games),
-    path('platform/cart', task3.views.cart),
+    path('platform/', task4.views.platform),
+    path('games/', task4.views.games),
+    path('cart/', task4.views.cart),
 ]
