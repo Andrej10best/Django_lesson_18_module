@@ -18,13 +18,15 @@ from django.contrib import admin
 from django.urls import path
 import task2.views
 from task2.views import GetClass
+import task3.views
+import task4.views
+import task5.views
 
 # Для домашнего задания "Базовые HTML теги в шаблонах"
 
 # Если проверяется данное домашнее задание, раскомментировать кода ниже,
 # а домашнее задание "DTL. Теги, наследование" оставить закомментированным.
 
-# import task3.views
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
 #     path('get_class/', GetClass.as_view()),
@@ -32,6 +34,8 @@ from task2.views import GetClass
 #     path('platform/', task3.views.platform),
 #     path('games/', task3.views.games),
 #     path('cart/', task3.views.cart),
+#     path('html_sign_up/', task5.views.sign_up_by_html),
+#     path('django_sign_up/', task5.views.sign_up_by_django),
 # ]
 
 
@@ -40,7 +44,7 @@ from task2.views import GetClass
 # Если проверяется данное домашнее задание, раскомментировать кода ниже,
 # а домашнее задание "Базовые HTML теги в шаблонах" оставить закомментированным.
 
-import task4.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('get_class/', GetClass.as_view()),
@@ -48,4 +52,6 @@ urlpatterns = [
     path('platform/', task4.views.platform),
     path('games/', task4.views.games),
     path('cart/', task4.views.cart),
+    path('html_sign_up/', task5.views.sign_up_by_html),
+    path('django_sign_up/', task5.views.sign_up_by_django),
 ]
